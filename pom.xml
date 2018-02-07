@@ -18,6 +18,7 @@
     <modules>
         <module>sea-ad-register</module>
         <module>sea-ad-register-client</module>
+        <module>sea-ad-cas</module>
     </modules>
 
     <properties>
