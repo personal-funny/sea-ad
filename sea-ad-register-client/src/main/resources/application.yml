@@ -15,21 +15,27 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka
     healthcheck:
-      enabled: true     # 将 actuator health中的健康状态传播到Eureka Server
+      enabled: true                       # 将 actuator health中的健康状态传播到Eureka Server
 
 management:
-  port: 8099            # actuator 暴露接口使用的端口
-  context-path: /admin  # actuator 暴露接口的前缀
+  port: 8099                              # actuator 暴露接口使用的端口
+  context-path: /admin                    # actuator 暴露接口的前缀
   security:
-    enabled: true       # 启用基本鉴权，默认为true
+    enabled: true                         # 启用基本鉴权，默认为true
 endpoints:
   health:
-    sensitive: true     # actuator的health接口是否敏感
+    sensitive: true                       # actuator的health接口是否敏感
+
+info:
+  app:
+    name: "sea-ad-register-client"
+    description: "sea-ad-register-client"
+    version: "0.0.1-SNAPSHOT"
 
 security:
   basic:
     enabled: true
-    path: /admin        # 拦截/admin
+    path: /admin                          # 拦截/admin
   user:
-    name: admin         # 用户名
-    password: 123456    # 密码
+    name: admin                           # 用户名
+    password: 123456                      # 密码
