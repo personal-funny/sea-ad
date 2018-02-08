@@ -19,6 +19,7 @@
         <module>sea-ad-register</module>
         <module>sea-ad-register-client</module>
         <module>sea-ad-cas</module>
+        <module>sea-ad-modal</module>
     </modules>
 
     <properties>
@@ -29,9 +30,18 @@
         <lombok.version>1.16.20</lombok.version>
         <spring.cloud.version>Dalston.SR3</spring.cloud.version>
         <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
+
+        <cas-client-autoconfig-support.version>1.5.0-GA</cas-client-autoconfig-support.version>
+        <shiro-spring.version>1.4.0</shiro-spring.version>
+        <shiro-cas.version>1.4.0</shiro-cas.version>
     </properties>
 
     <dependencies>
+        <!-- eureka client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -63,6 +73,21 @@
                 <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.unicon.cas</groupId>
+                <artifactId>cas-client-autoconfig-support</artifactId>
+                <version>${cas-client-autoconfig-support.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-cas</artifactId>
+                <version>${shiro-cas.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

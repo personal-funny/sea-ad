@@ -13,4 +13,14 @@
     <artifactId>sea-ad-cas-server</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-cas</artifactId>
+        </dependency>
+    </dependencies>
 </project>

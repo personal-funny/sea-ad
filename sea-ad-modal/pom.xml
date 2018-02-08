@@ -9,21 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sea.ad.cas</groupId>
-    <artifactId>sea-ad-cas</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>sea-ad-cas-server</module>
-        <module>sea-ad-cas-client</module>
-    </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.sea.ad.modal</groupId>
-            <artifactId>sea-ad-modal</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-    </dependencies>
+    <groupId>com.sea.ad.modal</groupId>
+    <artifactId>sea-ad-modal</artifactId>
 
 </project>
