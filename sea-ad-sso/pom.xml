@@ -9,13 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sea.ad.cas</groupId>
-    <artifactId>sea-ad-cas</artifactId>
+    <groupId>com.sea.ad.sso</groupId>
+    <artifactId>sea-ad-sso</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>sea-ad-cas-server</module>
-        <module>sea-ad-cas-client</module>
+        <module>sea-ad-sso-server</module>
+        <module>sea-ad-sso-client</module>
     </modules>
 
     <dependencies>

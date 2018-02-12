@@ -1,12 +1,12 @@
-package com.sea.ad.cas.server;
+package com.sea.ad.sso.server.shiro;
 
-import com.sea.ad.modal.User;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
@@ -14,6 +14,7 @@ import java.util.Objects;
  * @author lx48475
  * @version Id: MyShiroCasRealm.java, v 0.1 2018年02月07 15:19 lx48475 Exp $
  */
+@Component
 public class MyShiroCasRealm extends AuthorizingRealm {
 
     public MyShiroCasRealm() {
@@ -33,7 +34,6 @@ public class MyShiroCasRealm extends AuthorizingRealm {
         if (Objects.isNull(token)) {
             throw new AuthenticationException("用户不存在");
         }
-        User user = new User();
-        return new SimpleAuthenticationInfo(user.getId(), user.getName(), getName());
+        return new SimpleAuthenticationInfo(1, "123", getName());
     }
 }

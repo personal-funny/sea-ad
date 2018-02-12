@@ -3,14 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sea-ad-cas</artifactId>
-        <groupId>com.sea.ad.cas</groupId>
+        <artifactId>sea-ad-sso</artifactId>
+        <groupId>com.sea.ad.sso</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sea.ad.cas.client</groupId>
-    <artifactId>sea-ad-cas-client</artifactId>
+    <groupId>com.sea.ad.sso.client</groupId>
+    <artifactId>sea-ad-sso-client</artifactId>
 
 
 </project>

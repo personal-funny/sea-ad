@@ -1,7 +1,8 @@
-package com.sea.ad.cas.server;
+package com.sea.ad.sso.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
@@ -9,11 +10,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @version Id: CasServerApplication.java, v 0.1 2018年02月07 16:19 lx48475 Exp $
  */
 @EnableDiscoveryClient
-@SpringBootApplication
-public class CasServerApplication {
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class SsoServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CasServerApplication.class, args);
+        SpringApplication.run(SsoServerApplication.class, args);
     }
 
 }
