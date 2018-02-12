@@ -29,7 +29,7 @@ public class AccountController {
     public ResponseEntity login(@RequestBody User user) {
         try {
             Subject subject = SecurityUtils.getSubject();
-            AuthenticationToken token = new UsernamePasswordToken(user.getName(), user.getDesc());
+            AuthenticationToken token = new UsernamePasswordToken(user.getName(), user.getPassword());
             subject.login(token);
             return ResponseEntity.ok().build();
         } catch (AuthenticationException e) {
