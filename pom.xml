@@ -20,6 +20,7 @@
         <module>sea-ad-register-client</module>
         <module>sea-ad-sso</module>
         <module>sea-ad-modal</module>
+        <module>sea-ad-gateway</module>
     </modules>
 
     <properties>
@@ -28,7 +29,7 @@
         <java.version>1.8</java.version>
 
         <lombok.version>1.16.20</lombok.version>
-        <spring.cloud.version>Dalston.SR3</spring.cloud.version>
+        <spring-cloud-dependencies.version>Dalston.SR3</spring-cloud-dependencies.version>
         <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
 
         <mysql-connector-java.version>5.1.44</mysql-connector-java.version>
@@ -74,7 +75,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring.cloud.version}</version>
+                <version>${spring-cloud-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
