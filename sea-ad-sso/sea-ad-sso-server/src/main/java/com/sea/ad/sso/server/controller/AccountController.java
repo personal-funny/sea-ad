@@ -2,6 +2,7 @@ package com.sea.ad.sso.server.controller;
 
 import com.sea.ad.modal.User;
 import com.sea.ad.sso.server.manager.UserManager;
+import com.sea.ad.sso.server.util.ShiroUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -44,5 +45,11 @@ public class AccountController {
         User user = (User) subject.getPrincipal();
         subject.logout();
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("current")
+    public ResponseEntity current() {
+        User user = ShiroUtils.getCurrentUser();
+        return ResponseEntity.ok(user);
     }
 }
