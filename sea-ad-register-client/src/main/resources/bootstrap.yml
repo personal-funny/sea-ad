@@ -1,6 +1,9 @@
 spring:
   application:
     name: sea-ad-register-client
+  cloud:
+    config:
+      uri: http://localhost:10000
 
 server:
   port: 11001

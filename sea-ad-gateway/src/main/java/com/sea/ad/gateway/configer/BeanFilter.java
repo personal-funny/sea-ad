@@ -1,8 +1,8 @@
-package sea.ad.gateway.configer;
+package com.sea.ad.gateway.configer;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sea.ad.gateway.filter.pre.SimplePreFilter;
+import com.sea.ad.gateway.filter.pre.SimplePreFilter;
 
 /**
  * @author lx48475

@@ -3,13 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sea-ad-parent</artifactId>
         <groupId>com.sea.ad</groupId>
+        <artifactId>sea-ad-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sea.ad.sso</groupId>
     <artifactId>sea-ad-sso</artifactId>
     <packaging>pom</packaging>
 
@@ -20,7 +19,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sea.ad.modal</groupId>
+            <groupId>com.sea.ad</groupId>
             <artifactId>sea-ad-modal</artifactId>
             <version>${parent.version}</version>
         </dependency>

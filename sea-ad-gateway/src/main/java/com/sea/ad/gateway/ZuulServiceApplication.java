@@ -1,4 +1,4 @@
-package sea.ad.gateway;
+package com.sea.ad.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

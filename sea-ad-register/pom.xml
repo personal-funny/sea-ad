@@ -9,8 +9,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.sea.ad.register</groupId>
     <artifactId>sea-ad-register</artifactId>
+    <packaging>jar</packaging>
     <!--<packaging>jar</packaging>-->
 
     <!--<properties>-->

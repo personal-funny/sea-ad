@@ -21,6 +21,7 @@
         <module>sea-ad-sso</module>
         <module>sea-ad-modal</module>
         <module>sea-ad-gateway</module>
+        <module>sea-ad-config</module>
     </modules>
 
     <properties>
@@ -31,6 +32,7 @@
         <lombok.version>1.16.20</lombok.version>
         <spring-cloud-dependencies.version>Dalston.SR3</spring-cloud-dependencies.version>
         <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
+        <!--<spring-cloud-config.version>1.4.2.RELEASE</spring-cloud-config.version>-->
 
         <mysql-connector-java.version>5.1.44</mysql-connector-java.version>
         <cas-client-autoconfig-support.version>1.5.0-GA</cas-client-autoconfig-support.version>
@@ -86,6 +88,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.springframework.cloud</groupId>-->
+                <!--<artifactId>spring-cloud-config</artifactId>-->
+                <!--<version>${spring-cloud-config.version}</version>-->
+            <!--</dependency>-->
             <!-- JDBC连接数据库，因为要用HikariCP，所以需要将SpringBoot中的tomcat-jdbc排除 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
