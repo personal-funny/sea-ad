@@ -1,5 +1,8 @@
 package com.sea.ad.register.client.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,7 +16,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("default_api")
 public class DemoController {
     @GetMapping("/hello")
-    public String hello(@RequestParam(required = false, defaultValue = "test") String name) {
+    @HystrixCommand(fallbackMethod = "hasError", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "300")
+    })
+    public String hello(@RequestParam(required = true) String name) {
+        if (StringUtils.isEmpty(name)) {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         return "Hello! " + name;
+    }
+
+    public String hasError(String name) {
+        return "出错了！";
     }
 }
