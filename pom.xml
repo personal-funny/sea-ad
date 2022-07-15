@@ -41,7 +41,7 @@
         <shiro-spring.version>1.4.0</shiro-spring.version>
         <shiro-cas.version>1.4.0</shiro-cas.version>
         <shiro-core.version>1.4.0</shiro-core.version>
-        <jackson.version>2.9.2</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
         <commons-codec.version>1.11</commons-codec.version>
         <commons-lang3.version>3.7</commons-lang3.version>
     </properties>
